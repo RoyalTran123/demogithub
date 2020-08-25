@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        label{
+            
+            display: inline-block;
+            text-align: right;
+        }
+        input:required{
+            border: yellow solid magenta;
+        }
+        input[type="submit"], 
+        input[type="reset"]{
+            font-size: 1.05rem;
+            border-radius: 5px;
+            padding: 2px 15px;
+        }
+    </style>
+</head>
+<body>
+    <form action="" method="POST">
+        <label for="">Username</label>
+        <input type="text" id="txtUser" name="txtUser" placeholder="nhap tai khoan"
+        required><br><br>
+
+       <label for="">Password</label>
+        <input type="password" name="txtPass" id="txtPass" placeholder="nhap mat khau"
+        required><br><br>
+        Remember Password
+        <input type="checkbox" name="ckrem" checked><br><br>
+        <input type="submit" value="login" >
+        <input type="reset" value="Reset">
+    </form>
+</body>
+</html>

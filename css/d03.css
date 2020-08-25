@@ -1,0 +1,71 @@
+/*tao css*/
+/* uni*/
+*{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: x-large;  
+   
+}
+/* type selector*/
+#banh_nuong img{
+    width: 450px;
+    height: 400px;
+    padding: 10px;
+}
+#banh_deo img{
+    width: 350px;
+    height: 350px;
+    padding: 5px;
+}
+a{
+    text-decoration: none;
+}
+h2{
+    color: red;
+}
+/*class selector co ten */
+.autunm{
+    font-style: italic;
+    
+    border: double medium brown;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 2rem;
+    background-color: burlywood;
+}
+/*pseudo class:: ::first-letter*/
+p.title::first-letter{
+    font-size: 200%;
+}
+
+p.title::first-line{
+    font-size: normal;
+    font-weight: bold;
+}
+/* id selector*/
+#menu{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.2rem;
+    color: royalblue;
+}
+.center img{
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+a:hover{
+    background-color: chocolate;
+}
+div img {
+    width: 700px;
+    height: 450px;
+    border: darkorange gold medium;
+    border-radius: 50%;
+}
+footer{
+    background-color: peru;
+    height: 200px;
+}
+header image{
+    height: 100px;
+   
+}

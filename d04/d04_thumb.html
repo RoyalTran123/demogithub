@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>thumb-nail</title>
+    <style>
+        .small{
+            width: 200px;
+            height: 150px;
+        }
+        .big{
+            width: 500px;
+            height: 350px;
+        }
+        #galary{
+            position: relative;
+        }
+        #galary ul{
+            list-style-type: none;
+            width: 450px;
+        }
+        #galary span{
+            display: none;
+            position: absolute;
+            top: 10px;
+            left: 450px;
+            
+        }
+        #galary li{
+            display: inline;
+            padding: 10px;
+        
+        }
+        #galary li:hover span {
+            display: inline;
+
+        }
+    </style>
+</head>
+<body>
+    <h2>
+        Den trung thu
+    </h2>
+    <hr>
+    <div id="galary">
+        <!--ul>li*4>img+span>img, target="_blank" mo cua so moi-->
+    <ul>
+        <li><img src="../images/banh-trung-thu-1.jpg" alt="" class="small"><span><img src="../images/banh-trung-thu-1.jpg" alt="" class="big"></span></li>
+        <li><img src="../images/banh_nuong_5.jpg" alt="" class="small"><span><img src="../images/banh_nuong_5.jpg" alt="" class="big"></span></li>
+        <li><img src="../images/banh-trung-thu-3.jpg" alt="" class="small"><span><img src="../images/banh-trung-thu-3.jpg" alt="" class="big"></span></li>
+        <li><img src="../images/banh_nuong_4.jpg" alt="" class="small"><span><img src="../images/banh_nuong_4.jpg" alt="" class="big"></span></li>
+    </ul>
+    </div>
+    
+
+</body>
+</html>

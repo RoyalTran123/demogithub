@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        input[type="submit"], 
+        input[type="reset"]{
+            font-size: 1.05rem;
+            border-radius: 5px;
+            padding: 2px 15px;
+        }
+        .formlogin{
+            margin-top: 10px;
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+
+            border: groove gray medium;
+            padding: 1rem;
+        }
+        td{
+            padding: 5px;
+        }
+        input:required{
+            border: palevioletred solid thin;
+        }
+    </style>
+</head>
+<body>
+    <div class="formlogin">
+        <h2>SIGN-UP</h2>
+        <hr>
+        <form action="d05_login.html" method="POST">
+            <table>
+                <tr>
+                    <td style="width: 80px;">Username</td>
+                    <td><input type="text" name="txtUser" id="txtUser" value="Hoang Gia" required>
+                    
+                    </td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td><input type="email" name="txtmail" id="txtmail" required></td>
+                </tr>
+                <tr>
+                    <td>Password</td>
+                    <td><input type="password" name="txtPass" id="txtpass" required value="123"></td>
+                </tr>
+                <tr>
+                    <td>Phone</td>
+                    <td>
+                        <input type="tel" name="txtphone" id="txtphone" placeholder="nhap so dien thoai">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Gender</td>
+                    <td>
+                        male<input type="radio" name="rdGender" id="redmale">
+                        female<input type="radio" name="rdGender" id="redfemale">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Birthday</td>
+                    <td>
+                        <input type="date" name="txtDob" id="txtDoB" value="2002-08-15">
+                    </td>
+                </tr>
+                <tr>
+                    <td>city</td>
+                    <td>
+                        <select name="cbcity" id= "city" required>
+                            <option value="">--select--</option>
+                            <option value="SG">Saigon</option>
+                            <option value="HN">Hanoi</option>
+                            <option value="HU">Hue</option>
+                            <option value="DN">Danang</option>
+                            <option value="CT">Cantho</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Hobies</td>
+                    <td>
+                        <input type="checkbox" name="ckEat" id="chkEat" checked>
+                        sleep<input type="checkbox" name="cksleep" id="cksleep">
+                        Game<input type="checkbox" name="ckname">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Level</td>
+                    <td>
+                        <input type="number" name="txtlevel" id="txtlevel" min="1" max="10">
+                        
+
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="submit" value="submit">
+                        <input type="reset" value="reset">
+                    </td>
+                    <td></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>
