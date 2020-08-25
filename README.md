@@ -1,2 +1,2 @@
 # demogithub-
-linkbaitap https://github.com/RoyalTran123/demogithub-/blob/master/index.html
+linkbaitap https://royaltran123.github.io/demogithub/
