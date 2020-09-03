@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signin</title>
+    <link rel="stylesheet" href="../css/d10.css">
+</head>
+
+<body>
+    <div class="main">
+        <form action="" method="get" style="width: 80%;" id="formLOG" name="formLOG">
+            <legend>Sign-In</legend>
+            <hr>
+
+            <label for="">User name: </label>
+            <input type="text" name="txt-username" id="txt-username" value="thuoc" required> <br>
+
+            <label for="">Password: </label>
+            <input type="password" name="txt-pass" id="txt-pass" value="123" required> <br>
+
+            <br><br>
+
+            <input type="submit" value="Submit" name="bt-submit" id="bt-submit">
+            <input type="reset" value="Reset" name="bt-reset" id="bt-reset">
+
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("formLOG").onsubmit = function () {
+            var username = document.getElementById("txt-username").value;
+            var password = document.getElementById("txt-pass").value;
+
+            //kiem tra doi chieu voi gia tri cua bien session-storage
+            var uid = sessionStorage.getItem("uid");
+            var pwd = sessionStorage.getItem("pwd");
+
+            if (username == uid && password == pwd) {
+                alert("Login succeed !");
+                location.href = '../d08/d08_Math.html';
+
+            }
+            else {
+                alert("Invalid username/password ! Login Fail !!!");
+                location.href = 'd10_signup.html';
+            }
+
+            return false;
+        }
+    </script>
+</body>
+
+</html>

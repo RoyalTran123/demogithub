@@ -1,0 +1,35 @@
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.main{
+    width: 80%;
+    margin: 10px auto;
+}
+
+label{
+    display: inline-block;
+    width: 100px;
+    padding: 6px 3px;
+}
+
+input[type='text'],
+input[type='password'],
+input[type='email'],
+select
+{
+    font-size: 1.05rem;
+    width: 200px;
+}
+
+textarea{
+    width: 310px;
+    font-size: 1.05rem;
+}
+
+input[type='submit'],
+input[type='reset']{
+    font-size: 1.03rem;
+    font-weight: bold;
+    padding: 3px 12px;
+}
