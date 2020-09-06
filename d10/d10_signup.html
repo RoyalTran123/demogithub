@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>sign-up</title>
-    <link rel="stylesheet" href="../css/d10.css">
+    <link rel="stylesheet" href="../d10/d10.css">
 </head>
 
 <body>
     <div class="main">
         <h2>Sign-up</h2>
         <hr>
-        <form action="d10_signin.html" method="get" id="formDK">
+        <form action="" method="get" id="formDK"><!--d10_signin.html-->
 
             <label for="">User name: </label>
             <input type="text" name="txt-username" id="txt-username" value="thuoc" required> <br>
@@ -30,10 +30,10 @@
             <label for="">City: </label>
             <select name="cbcity" id="cbcity" required>
                 <option value="">-- select city --</option>
-                <option value="SG">Saigon</option>
-                <option value="HU">Hue</option>
-                <option value="HN">Hanoi</option>
-                <option value="CT">Cantho</option>
+                <option value="Saigon">Saigon</option>
+                <option value="Hue">Hue</option>
+                <option value="Hanoi">Hanoi</option>
+                <option value="Cantho">Cantho</option>
             </select>
             <br><br>
 
@@ -75,13 +75,13 @@
 
 
             // 2. do du lieu cua mang a[] ra 1 trang moi
-            // var new_WIN = window.open();
-            // new_WIN.document.writeln("<h2>Your information</h2>");
-            // new_WIN.document.writeln("<hr>");
-            // new_WIN.document.writeln(a.join("<br>"));
+            var new_WIN = window.open();
+            new_WIN.document.writeln("<h2>Your information</h2>");
+            new_WIN.document.writeln("<hr>");
+            new_WIN.document.writeln(a.join("<br>"));
 
             //3. xuat du lieu cua mang a[] ra hop thong bao alert()
-            //alert(a.join("\n"));
+            alert(a.join("\n"));
 
 
             //luu username va password vo bien session-storage
@@ -89,7 +89,7 @@
             sessionStorage.setItem("pwd", pwd);
 
 
-            //return false; //ko chuyen trang, ko load lai trang
+            return false; //ko chuyen trang, ko load lai trang
 
         }
 
