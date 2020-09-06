@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thư Viện sign-up</title>
+    <link rel="stylesheet" href="../d10/d10.css">
+</head>
+
+<body>
+    <div class="main">
+        <h2>Thư Viện signup</h2>
+        <hr>
+        <form action="" method="get" id="formDK"><!--d10_signin.html-->
+            <table>
+                <!----fullname---->
+                <tr>
+                    <td class="colum1">
+                        <label for="txtfullname">Full name
+                        <label>
+                    </td>          
+                    <td class="colum2" >
+                        <input 
+                        type="text" name="txt-fullname" id="txt-fullname" value="Allan" size="50" required >
+                    </td>
+                </tr>
+
+                <!-----Username----->
+                <tr>
+                    <td><label for="">User name: </label></td>
+                    <td><input type="text" name="txt-username" id="txt-username" value="thuoc" required></td>
+                </tr>
+
+                <!-------Gender----------->
+                <tr>
+                    <td class="colum1">
+                        <label for="gender">Gender</label>
+                    </td>
+                    <td class="colum2">
+                        <input type="radio" name="rdGender" id="txt-male" checked value="male"> Male
+                        <input type="radio" name="rdGender" id="txt-female" value="female"> Female
+                    </td>
+                </tr>
+        
+                <!-----------Birthday------>
+                <tr>
+                    <td class="colum1">
+                        <label for="birthday">Date of Birth</label>
+                    </td>
+                    <td class="colum2">
+                        <input type="date" name="txt-birth" id="txt-birth" value="12-Mar-2000">
+                    </td>
+                    <!--------Address------->
+                    <tr>
+                        <td class="colum1">
+                            <label for="address">Address
+                            </label>
+                        </td>
+                        <td class="colum2">
+                            <input type="text"  name="txt-address" id="txt-address" value="124 Haminton" size="45" required >
+                        </td>
+                    </tr>
+                    <!--------- Email ------>
+                    <tr>
+                        <td class="colum1">
+                            <label for="email">Email
+                            </label>
+                        </td>
+                        <td class="colum2">
+                            <input type="email" id="txt-email" name="tx-temail" value="Allan@gmail.com" size="50" required >
+                        </td>
+                    </tr>
+                    <!---------Phone------>
+                    <tr>
+                        <td class="colum1">
+                            <label for="phonenumber">Phone number</label>
+                        </td>
+                        <td class="colum2">
+                            <input type="tel"  name="nun-phone"
+                            id="nun-phone"
+                            value="012123456"required >
+                        </td>
+                    </tr>
+                    <!-----password----->
+                    <tr>
+                        <td class="colum1"><label for="">Password: </label></td>
+                        <td> <input type="password" name="txt-pass" id="txt-pass" value="123" required></td>
+                    </tr>
+                    <!---------city--------->
+                    <tr>
+                        <td class="colum1">
+                            <label for="Country">City</label>
+                        </td>
+                        <td class="colum2">
+                            <select name="cbcity" id= "cbcity" required>
+                                <option value="">---Select---</option>
+                                <option value="Saigon">Saigon</option>
+                                <option value="Hue">Hue</option>
+                                <option value="Danang">Da nang</option>
+                                <option value="Cantho">Cantho city</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <!---------comment-------->
+                    <tr>
+                        <td class="colum1">
+                            <label for="Comment"   >Comment<label>
+                        </td>
+                        <td class="colum2">
+                            <textarea name="txt-note" id="txt-note" cols="43" rows="5" required></textarea>
+                        </td>
+                    </tr>
+                <!-----submit----->
+                <div class="end">
+                    <tr>
+                        <td colspan="2" >
+                            <input type="submit" value="Submit" name="bt-submit" id="bt-submit">
+                            <input type="reset" value="Reset" name="bt-reset" id="bt-reset">
+                            
+                        </td>
+                    </tr>
+                    
+                </div>                                  
+            </table>
+            
+        </form>
+    </div>
+
+ <script>
+         form_signup = document.getElementById("formDK");
+            document.getElementById("formDK").onsubmit = function () {
+    
+                //tao bien mang chua du lieu nhap
+                var a = [];
+    
+                //fullname
+                var fun = document.getElementById("txt-fullname").value;
+                a.push("fullname : " + fun);
+
+                //gender
+                var gen = form_signup.rdGender.value;
+                a.push("Gender: " + gen);
+                
+                //birthday
+                var bri = document.getElementById("txt-birth").value;
+                a.push("Birthday: " + bri);
+                 
+                 //address
+                var add = document.getElementById("txt-address").value;
+                a.push("Address: " + add);
+
+                //Email
+                var mai = document.getElementById("txt-email").value;
+                a.push("Email: " + mai);
+
+                //phone Number
+                var pho = document.getElementById("nun-phone").value;
+                a.push("Phone: " +  pho);
+                
+                //password
+                var pwd = document.getElementById("txt-pass").value;
+                a.push("password: " + pwd);
+
+                //username
+                var uid = document.getElementById("txt-username").value;
+                a.push("username : " + uid);
+
+                //city
+                var city = form_signup.cbcity.value;
+                a.push("city: " + city);
+
+                //comment
+                var com = document.getElementById("txt-note").value;
+                a.push("Comment: " + com);
+
+                //xuất ra hop thoai alert()
+                alert(a.join("\n")); 
+
+                /*do du lieu cua mang a[] vo o text-area [txt-note]
+                 document.getElementById("txt-note").value = a.join("\n");*/
+
+                //do du lieu cua mang a[] ra 1 trang moi
+                var new_WIN = window.open();
+                new_WIN.document.writeln("<h2>Your information</h2>");
+                new_WIN.document.writeln("<hr>");
+                new_WIN.document.writeln(a.join("<br>"));
+
+                return false; 
+
+    
+            }
+
+    </script>
+
+</body>
+
+</html>
